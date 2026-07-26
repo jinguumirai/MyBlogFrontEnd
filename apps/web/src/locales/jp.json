@@ -1,0 +1,10 @@
+{
+    "hello": "こんにちは",
+    "welcome": "ようこそ",
+    "login": "ログイン",
+    "userNoInputMessage": "ユーザー名を入力してください！",
+    "passwordNoInputMessage": "パスワードを入力してください！",
+    "username": "ユーザー名",
+    "password": "パスワード",
+    "rememberMe": "ログイン状態を保持する"
+}
