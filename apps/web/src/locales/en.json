@@ -1,0 +1,10 @@
+{
+    "hello": "hello",
+    "welcome": "welcome",
+    "login": "login",
+    "userNoInputMessage": "Please input your username!",
+    "passwordNoInputMessage": "Please input your Password!",
+    "username": "username",
+    "password": "password",
+    "rememberMe": "Remember me"
+}
