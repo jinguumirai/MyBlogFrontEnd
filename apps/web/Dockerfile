@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1
+
 FROM node:24-alpine AS deps
 
 WORKDIR /app
@@ -15,11 +17,9 @@ FROM deps AS build
 COPY apps/web apps/web
 COPY packages/ui packages/ui
 
-ARG VITE_API_BASE_URL=/api
-ENV VITE_API_BASE_URL=${VITE_API_BASE_URL}
-
 RUN pnpm --filter @my/ui build
-RUN pnpm --filter web exec vite build
+RUN --mount=type=secret,id=web_env_production,target=/app/apps/web/.env.production,required=true \
+    pnpm --filter web exec vite build
 
 FROM nginx:alpine AS runner
 
