@@ -13,7 +13,7 @@ function App() {
   console.log(values); // ← ここで確認できる
 
   try {
-    const res = await fetch(`${apiBaseUrl}/login/email`, {
+    const res = await fetch(`${apiBaseUrl}/login/login/email`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
